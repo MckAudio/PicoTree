@@ -96,4 +96,5 @@ int main()
     {
         tight_loop_contents();
     }
+    return 0;
 }
