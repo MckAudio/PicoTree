@@ -28,3 +28,10 @@ target_link_libraries(encoder pico_stdlib)
 pico_enable_stdio_usb(encoder 1)
 pico_enable_stdio_uart(encoder 0)
 pico_add_extra_outputs(encoder)
+
+# LED PWM Fade
+add_executable(led
+    ./src/led_fade.c
+    )
+target_link_libraries(led pico_stdlib hardware_pwm hardware_irq)
+pico_add_extra_outputs(led)

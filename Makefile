@@ -9,3 +9,7 @@ blink:
 encoder:
 	make -j4 -C build encoder
 	openocd -f interface/raspberrypi-swd.cfg -f target/rp2040.cfg -c "program build/encoder.elf verify reset exit"
+
+led:
+	make -j4 -C build led
+	openocd -f interface/raspberrypi-swd.cfg -f target/rp2040.cfg -c "program build/led.elf verify reset exit"
